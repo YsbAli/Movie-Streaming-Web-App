@@ -21,8 +21,9 @@ export default function Signup() {
     try {
       const { email, password } = formValues;
       await createUserWithEmailAndPassword(firebaseAuth, email, password);
-      toast.success("Sign Up Successfull!");
+      toast.success("Signup Successfull.");
     } catch (error) {
+      toast.error("Please Provide Currect Data.");
       console.log(error);
     }
   };
@@ -129,7 +130,7 @@ const Container = styled.div`
         }
       }
       button {
-        padding: 0.5rem 1rem;
+        padding: 1rem 1rem;
         background-color: #e50914;
         border: none;
         cursor: pointer;
