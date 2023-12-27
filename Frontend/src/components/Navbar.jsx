@@ -20,7 +20,7 @@ export default function Navbar({ isScrolled }) {
   ];
 
   onAuthStateChanged(firebaseAuth, (currentUser) => {
-    if (!currentUser) navigate("/login");
+    if (!currentUser) navigate("/");
   });
 
   const HandleSigout = () => {
@@ -33,7 +33,9 @@ export default function Navbar({ isScrolled }) {
       <nav className={`${isScrolled ? "scrolled" : ""} flex`}>
         <div className="left flex a-center">
           <div className="brand flex a-center j-center">
-            <img src={logo} alt="Logo" />
+            <Link to="/">
+              <img src={logo} alt="Logo" />
+            </Link>
           </div>
           <ul className="links flex">
             {links.map(({ name, link }) => {
