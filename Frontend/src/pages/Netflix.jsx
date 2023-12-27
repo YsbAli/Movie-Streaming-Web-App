@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const Netflix = () => {
+function Netflix() {
   return (
     <div>
-      <h1>Netflix</h1>
+      <h1>Netflix Home</h1>
     </div>
-  )
+  );
 }
 
-export default Netflix
+export default Netflix;
