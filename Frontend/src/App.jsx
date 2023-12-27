@@ -7,6 +7,9 @@ import Movies from "./pages/Movies";
 import UserListedMovies from "./pages/UserListedMovies";
 import Netflix from "./pages/Netflix";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const App = () => {
   return (
     <>
@@ -20,6 +23,7 @@ const App = () => {
         {/* <Route path="/new" element={<Player />} /> */}
         {/* <Route path="/mylist" element={<UserListedMovies />} /> */}
       </Routes>
+      <ToastContainer />
     </>
   );
 };
