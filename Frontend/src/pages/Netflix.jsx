@@ -11,7 +11,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchMovies, getGenres } from "../store";
 import { FaPlay } from "react-icons/fa";
 import { AiOutlineInfoCircle } from "react-icons/ai";
-// import Slider from "../components/Slider";
+import Slider from "../components/Slider";
 function Netflix() {
   const [isScrolled, setIsScrolled] = useState(false);
   const movies = useSelector((state) => state.netflix.movies);
@@ -68,7 +68,7 @@ function Netflix() {
           </div>
         </div>
       </div>
-      {/* <Slider movies={movies} /> */}
+      <Slider movies={movies} />
     </Container>
   );
 }
